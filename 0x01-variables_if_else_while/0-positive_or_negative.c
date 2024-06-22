@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-/**
- * main -  entry point for the main code block
- * Return statement - returns 0 -success
- ** /
+
  int main(void)
  {
  	int n;
