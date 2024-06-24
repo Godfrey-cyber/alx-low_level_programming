@@ -6,16 +6,15 @@
 int main(void)
 {
 	char base16num;
-	int base16char;
 
 	for (base16num = 0; base16num <= 9; base16num++)
 	{
 		putchar(base16num);
 	}
 
-	for (base16char = 'a'; base16char <= 'f'; base16char++)
+	for (base16num = 'a'; base16num <= 'f'; base16num++)
 	{
-		putchar(base16char);
+		putchar(base16num);
 	}
 
 	putchar('\n');
