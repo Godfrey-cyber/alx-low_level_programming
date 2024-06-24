@@ -8,7 +8,7 @@ int main(void)
 
 	for (digit = 48; digit < 57; digit++)
 	{
-		printf("%d\n", digit);
+		putchar(digit);
 	}
 	putchar('\n')
 
