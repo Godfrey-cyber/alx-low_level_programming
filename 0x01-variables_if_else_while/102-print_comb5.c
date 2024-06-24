@@ -7,6 +7,7 @@
 int main(void)
 {
 	int a, b;
+
 	for (a = 0; a < 100; a++)
 	{
 		for (b = 0; b < 100; b++)
@@ -24,8 +25,8 @@ int main(void)
 					putchar(' ');
 				}
 			}
-       		}
- 	}
+		}
+	}
 	putchar ('\n');
 	return (0);
 }
