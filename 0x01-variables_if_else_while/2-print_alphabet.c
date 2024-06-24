@@ -1,16 +1,17 @@
 #include <stdio.h>
 /**
- * main - Entry point of the code
+ * main - Entry point of the main function that prints alphabet characters
  * Return: Always 0 (Success) -> 0
  */
 int main(void)
 {
 
-  	char c;
+  	char alpha_letter;
 
- 	for(c = 'a'; c < 'z'; c++)
-		putchar(c);
-		putchar("\n");
+ 	for(alpha_letter = 'a'; alpha_letter < 'z'; alpha_letter++)
+		putchar(alpha_letter);
+
+	putchar("\n");
 
   	return (0);
 }
