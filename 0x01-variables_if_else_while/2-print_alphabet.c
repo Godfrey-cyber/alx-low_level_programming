@@ -6,10 +6,13 @@
 int main(void)
 {
 	char alpha_letter;
-	for(alpha_letter = 'a'; alpha_letter < 'z'; alpha_letter++)
+
+	for (alpha_letter = 'a'; alpha_letter < 'z'; alpha_letter++)
 	{
 		putchar(alpha_letter);
 	}
+
 	putchar('\n');
+
 	return (0);
 }
