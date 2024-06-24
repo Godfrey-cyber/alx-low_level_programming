@@ -15,9 +15,9 @@ int main(void)
 		{
 			for (number_3 = number_2 + 1; number_3 <= 57; number_3++)
 			{
-				putchar(num_1);
-				putchar(num_2);
-				putchar(num_3);
+				putchar(number_1);
+				putchar(number_2);
+				putchar(number_3);
 
 				if (!(number_1 == 55 && number_2 == 56 && number_3 == 57))
 				{
