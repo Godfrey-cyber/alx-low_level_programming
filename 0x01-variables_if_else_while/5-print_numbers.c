@@ -1,5 +1,6 @@
 #include <stdio.h>
-/** main -  printing single digit numbers of base 10  from 0, followed by a new line.
+/**
+ * main - prints a single digit numbers of base 10  from 0, with a new line.
  * Return - (0) Success
  **/
 int main(void)
