@@ -7,7 +7,7 @@
 
  int main(void)
  {
-	/*code goes in here*/
+	/*This program will assign a random number to the variable n each time it is executed.*/
  	int n;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
