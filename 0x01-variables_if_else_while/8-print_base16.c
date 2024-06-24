@@ -7,7 +7,7 @@ int main(void)
 {
 	char base16num;
 
-	for (base16num = 0; base16num <= 9; base16num++)
+	for (base16num = '0'; base16num <= '9'; base16num++)
 	{
 		putchar(base16num);
 	}
