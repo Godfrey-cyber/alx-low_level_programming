@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
-* main - a progrm that prints alphabets in lowercase, then in uppercase
-* Return: 0
-**/
-
+ *  main -A program that prints uppercase and lowercase alphabet characters
+ *  Return: Always 0 (Success) -> 0
+ */
 int main(void)
 {
 	char lower_letter;
