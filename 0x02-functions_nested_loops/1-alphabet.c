@@ -12,6 +12,6 @@ void print_alphabet()
 }
 int main(void)
 {
-	putchar(print_alphabet());
+	printf("%c\n", print_alphabet());
 	return (0);
 }
