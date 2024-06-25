@@ -6,11 +6,11 @@
 int main(void)
 {	
 	int i;
-	char name[] = "Godfrey";
+	char name[] = "_putchar";
 
 	for (i = 0; i <= 7; i++)
 	{
-		_putchar(p[i]);
+		_putchar(name[i]);
 	}
 	putchar("\n");
 	return 0;
