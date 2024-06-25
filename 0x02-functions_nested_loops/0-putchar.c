@@ -12,6 +12,6 @@ int main(void)
 	{
 		_putchar(name[i]);
 	}
-	putchar("\n");
+	_putchar("\n");
 	return 0;
 }
