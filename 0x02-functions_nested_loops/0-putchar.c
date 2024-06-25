@@ -11,7 +11,7 @@ int main(void)
 
 	for (i = 0; i <= 7; i++)
 	{
-		putchar(name[i]);
+		_putchar(name[i]);
 	}
 	return (0);
 }
