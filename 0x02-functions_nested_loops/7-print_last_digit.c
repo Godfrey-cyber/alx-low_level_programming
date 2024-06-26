@@ -12,13 +12,13 @@
 		num = number % 10;
 		if (num < 0)
 		{
-			_putchar(l + 48);
-			return (-l);
+			_putchar(num + 48);
+			return (-num);
 		}
 		else
 		{
-			_putchar(l + 48);
-			return (l);
+			_putchar(num + 48);
+			return (num);
 		}
 	}
 }
