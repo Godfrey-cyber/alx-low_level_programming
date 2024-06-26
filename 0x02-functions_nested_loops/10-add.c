@@ -2,13 +2,11 @@
 #include "main.h"
 /**
  * add -  a function that adds two integers and returns the result.
- * Return: Returns (0) Success.
+ *  @a: number one.
+ *  @b: number two.
+ * Return: Add of number one and number two
  */
-int add(int, int)
+int add(int num1, int num2)
 {
-	int number;
-
-	number = add(89, 9);
-	printf("%d\n", number);
-	return (0);
+	return (num1, num2);
 }
