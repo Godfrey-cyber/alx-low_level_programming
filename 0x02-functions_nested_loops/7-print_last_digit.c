@@ -5,11 +5,12 @@
  * @n: input number as an integer.
  * Return: Will return the last digit.
  */
- int print_last_digit(int number)
+int print_last_digit(int n)
 {
 	{
 		int num;
-		num = number % 10;
+
+		num = n % 10;
 		if (num < 0)
 		{
 			_putchar(num + 48);
