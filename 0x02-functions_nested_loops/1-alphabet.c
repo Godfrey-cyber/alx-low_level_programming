@@ -7,7 +7,7 @@ void print_alphabet(void)
 {
 	char letter = 'a';
 
-	while (c <= 'z')
+	while (letter <= 'z')
 	{
 		putchar(letter);
 		letter++;
