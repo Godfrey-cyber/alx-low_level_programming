@@ -3,9 +3,9 @@
 /**
  * is_upper - a function that checks for uppercase character
  * @c - variable character
- * Return: Returns 0 
+ * Return: 1 if true, 0 if false
  */
-int is_upper(int c)
+int _isupper(int c)
 {
 
 	if (c >= 65 && c <= 90)
