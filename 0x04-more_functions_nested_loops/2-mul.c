@@ -2,13 +2,14 @@
 #include "main.h"
 /**
  * mult - a function that multiplies two numbers
- * @a - an integer
- * @b - an integer
- * Return: Returns 0
+ * @a - first integer
+ * @b - second integer
+ * Return: Returns a mltiple of a and b
  */
 int mul(int a, int b)
 {
 	int x;
+
 	x =  a * b;
-return (x);
+	return (x);
 }
