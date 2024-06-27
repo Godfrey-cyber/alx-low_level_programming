@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_diagonal - a function that draws a diagonal line on the terminal.
- * @n: an integer
+ * @c: an integer
  * Return: void. no return0.
  */
 void print_diagonal(int n)
