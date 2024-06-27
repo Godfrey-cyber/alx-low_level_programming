@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * mult - a function that multiplies two numbers
+ * mul - a function that multiplies two numbers
  * @a - first integer
  * @b - second integer
  * Return: Returns a mltiple of a and b
