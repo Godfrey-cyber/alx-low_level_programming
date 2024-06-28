@@ -1,22 +1,19 @@
 #include "main.h"
-
 /**
-* more_numbers - prints 10 lines of 1-14
-* Description: Uses headers to link and a nested loops to achieve goal
-* Return: void. no return.
+* more_numbers - prints 10 times the numbers, from 0 to 14.
 */
-
 void more_numbers(void)
 {
-	int i = 0, j = 0;
+	int i;
+	char c;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j <= 14; j++)
+		for (c = 0; c <= 14; c++)
 		{
-			if (j >= 10)
-			_putchar('1');
-			_putchar((j % 10) + '0');
+			if (c > 9)
+			_putchar((c / 10) + '0');
+			_putchar((c % 10) + '0');
 		}
 		_putchar('\n');
 	}
