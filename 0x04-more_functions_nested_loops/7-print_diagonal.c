@@ -1,17 +1,26 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
+
 /**
- * print_diagonal - a function that draws a diagonal line on the terminal.
- * @c: an integer
- * Return: void. no return0.
- */
+* print_diagonal - prints a diagonal line with new line
+* @n: an integer variable
+*
+* Description: Uses headers to link and a nested loops to achieve goal
+* Return: void. no return.
+*/
+
 void print_diagonal(int n)
 {
-	char c;
+	int i, j;
 
-	for (c = 0; c < n; c++)
+	if (n <= 0)/* if 0 or negative write newline */
+		_putchar('\n');
+	for (i = 0; i < n; i++)
 	{
-		_putchar('_');
+		for (j = n - i; j < n; j++)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
