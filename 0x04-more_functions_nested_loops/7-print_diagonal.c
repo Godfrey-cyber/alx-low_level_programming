@@ -1,28 +1,27 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
-* print_diagonal - prints a diagonal line with new line
-* @n: an integer variable
-*
-* Description: Uses headers to link and a nested loops to achieve goal
-* Return: void. no return.
+* print_diagonal - draws a diagonal line
+* @n: takes in an integer
 */
-
 void print_diagonal(int n)
 {
 	int i, j;
 
 	if (n <= 0)
-	{
 		_putchar('\n');
-	}
 	for (i = 0; i < n; i++)
 	{
-		for (j = n - i; j < n; j++)
+		for (j = 0; j <= i; j++)
 		{
-			_putchar(' ');
+			if (i == j)
+			{
+				_putchar('\\');
+				_putchar('\n');
+			}
+			else
+			{
+				_putchar(' ');
+			}
 		}
-		_putchar('\\');
-		_putchar('\n');
 	}
 }
