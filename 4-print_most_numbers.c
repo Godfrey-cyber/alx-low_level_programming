@@ -2,6 +2,8 @@
 
 /**
 * print_most_numbers -  prints the numbers except 2 and 4.
+* Description: headers to link and a nested loops to achieve goa
+* Return: void. no return.
 */
 void print_most_numbers(void)
 {
