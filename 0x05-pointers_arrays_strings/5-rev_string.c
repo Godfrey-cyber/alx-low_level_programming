@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * rev_string - update value.
+ * rev_string - updates the value.
  * @s: value to be evaluate.
  * Return: not.
  */
