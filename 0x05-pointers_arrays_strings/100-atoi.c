@@ -16,9 +16,9 @@ int _atoi(char *s)
 			sign++;
 		if (s[counter] >= 48 && s[counter] <= 57)/* D */
 		{
-    			i++;
+			i++;
 			result = result * 10 + s[counter] - '0';/* E */
-        	}
+		}
 		if (i > 0 && (s[counter] < 48 || s[counter] > 57))/* F */
 			break;
 	counter++;/* G */
