@@ -1,6 +1,7 @@
 #include "main.h"
 /**
 * _atoi - convers a string to an int
+* Return: returns 0 if no numbers and the result if numbers
 * @s: a pointer to a string guven by main
 */
 int _atoi(char *s)
