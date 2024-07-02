@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * * main - prints the characters of the string
- * *
- * * Return: Always 0.
- * */
-int main(void)
+ *  main - prints the characters of the string
+ * @str: char to check 
+ * Return: Always 0.
+ */
+void puts2(char *str)
 {
-	char *str;
+	int string;
 
-	str = "0123456789";
-	puts2(str);
-	return (0);
+	for (string = 0; str[string] != '\0'; string++)
+	if (string % 2 == 0)
+		_putchar(str[string]);
+	_putchar('\n');
 }
