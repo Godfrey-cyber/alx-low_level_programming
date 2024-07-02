@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *  main - prints the characters of the string
- * @str: char to check 
+ *  puts - prints the characters of the string
+ * @str: char to check
  * Return: Always 0.
  */
 void puts2(char *str)
