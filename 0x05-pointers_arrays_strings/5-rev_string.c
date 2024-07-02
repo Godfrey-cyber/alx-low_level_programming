@@ -27,3 +27,4 @@ void rev_string(char *s)
 		s[e] = s[x];
 		s[x] = n;
 	}
+}
