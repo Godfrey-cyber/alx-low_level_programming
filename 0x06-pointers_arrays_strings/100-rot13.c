@@ -1,9 +1,7 @@
 #include "main.h"
-
 /**
 * rot13 - encodes a string using rot13 encryption
 * @s: a pointer given by main
-*
 * Description: change all alpha characters by rot13 rules
 * Return: returns the s pointer
 */
