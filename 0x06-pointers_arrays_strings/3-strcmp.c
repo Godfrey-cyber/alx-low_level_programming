@@ -4,8 +4,7 @@
  * _strcmp - this function compares two strings
  * @string1: char to check
  * @string2: char to check
- * @n: the number of elements of the array
- * Return: dest
+ * Return: 0
  */
 int _strcmp(char *s1, char *s2)
 {
