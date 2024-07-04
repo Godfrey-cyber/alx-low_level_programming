@@ -5,7 +5,7 @@
  * @n: input value
  * Return: string
  */
-char *cap_string(char *)
+char *cap_string(char *n)
 {
 	int x;
 
