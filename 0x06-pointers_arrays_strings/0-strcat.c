@@ -20,9 +20,5 @@ char *_strcat(char *dest, char *src)
 		dest[i] = sc[j];
 	}
 
-	char s1[98] = "Hello ";
-	char s2[] = "World!\n";
-	char *ptr;
-
 	return (dest);
 }
