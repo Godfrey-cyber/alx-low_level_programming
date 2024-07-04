@@ -1,42 +1,35 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * cap_string - a function that capitalizes all words of a string.
- * @n: input value
- * Return: n value
+ * *cap_string - capitalizes all words of a string
+ *
+ * @a: int to check
+ *
+ * Return: 0 is success
  */
-char *cap_string(char *n)
+char *cap_string(char *a)
 {
 	int x;
-	
-	x = 0;
 
-	if (n[0] >= 'a' && n[0] <= 'z')
+	for (x = 0; a[x] != '\0'; x++)
 	{
-		n[0] = n[0] - 32;
-	}
-	for (x = 0; n[x] != '\0'; x++)
-	{
-		switch (n[x])
+		if (x == 0)
 		{
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
-			case ' ':
-			case '\n':
-			case '\t':
-			if (n[x + 1] > 96 && n[x + 1] < 123)
+		if (a[x] >= 'a' && a[x] <= 'z')
+		{
+			a[x] = a[x] - 32;
+		}
+		}
+		if (a[x] == ' ' || a[x] == '\n' || a[x] == ','
+		    || a[x] == '\t' || a[x] == ';' || a[x] == '.'
+		    || a[x] == '!' || a[x] == '?'
+		    || a[x] == '"' || a[x] == '(' || a[x] == ')'
+		    || a[x] == '{' || a[x] == '}')
+		{
+			if (a[x + 1] >= 'a' && a[x + 1] <= 'z')
 			{
-				n[x + 1] = n[x + 1] - 32;
+				a[x + 1] = a[x + 1] - 32;
 			}
 		}
 	}
-	return (n);
+		return (a);
 }
