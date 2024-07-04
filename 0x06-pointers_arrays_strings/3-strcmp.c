@@ -2,8 +2,8 @@
 #include "main.h"
 /**
  * _strcmp - this function compares two strings
- * @string1: char to check
- * @string2: char to check
+ * @s1: char to check
+ * @s2: char to check
  * Return: 0
  */
 int _strcmp(char *s1, char *s2)
