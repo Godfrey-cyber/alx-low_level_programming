@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * simple_print_buffer - prints buffer in hexa
+ * char *_memcpy - prints buffer in hexa
  * @b: the address of memory to print
  * @n: unsigned int to be changed
  * @s: the size of the memory to print
