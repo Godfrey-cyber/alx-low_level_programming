@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * _strchr - a function that locates a character in a string.
- * @s: a pointer from function main
+ * @s: a string to check
  * @c: the char to check about
  * Description: Returns a pointer to the first occurrence of the character c in the string
  * Return: returns a pointer to the first occurance
