@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * unsigned int _strspn - this function that gets the length of a prefix substring.
+ * int _strspn - this function that gets the length of a prefix substring.
  * @accept: pointer to get the bytes
  * @s: pointer to string char type
  * Return: Returns the number of bytes in the initial segment of s
@@ -11,7 +11,7 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int x;
 	unsigned int y;
 
-	for (x = 0; s[x]; a++)
+	for (x = 0; s[x]; x++)
 	{
 		for (y = 0; accept[y]; y++)
 		{
