@@ -1,1 +1,1 @@
-root readme file
+readme file for the c progamming
