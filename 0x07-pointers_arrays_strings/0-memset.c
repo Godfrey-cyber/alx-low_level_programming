@@ -3,7 +3,7 @@
 /**
  * simple_print_buffer - prints buffer in hexa
  * @b: the address of memory to print
- * @n: bytes to be changed
+ * @n: unsigned int to be changed
  * @s: the size of the memory to print
  * Return: changed array with new value for n bytes.
  */
