@@ -42,6 +42,6 @@ int is_palindrome(char *s)
 {
 	char *p;
 
-	p = _ultima(s);
-	return (_comparacadena(s, p));
+	p = _reverse(s);
+	return (_comparestring(s, p));
 }
