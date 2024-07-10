@@ -3,7 +3,7 @@
 /**
 * wildcmp - Entry point of the main code
 * @s1: character to work with
-* @s2: character to work with 
+* @s2: character to work with
 * Return: Always 0 (Success)
 */
 int wildcmp(char *s1, char *s2)
