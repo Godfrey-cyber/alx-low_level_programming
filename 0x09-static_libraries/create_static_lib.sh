@@ -1,3 +1,4 @@
+#!/bin/bash
 LIBRARY_NAME="liball.a"
 
 # Find all .c files in the current directory
