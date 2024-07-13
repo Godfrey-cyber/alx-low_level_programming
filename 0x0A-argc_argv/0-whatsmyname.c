@@ -1,4 +1,5 @@
-#include "main.h"he#include <stdio.h>
+#include "main.h"
+#include <stdio.h>
 
 /**
 * main - prints ts name follwoed by a newline
