@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
  /**
-  * char *str_concat -  function that concatenates two strings
+  * char str_concat - function that concatenates two strings
   * @s1: the first string main gives us
   * @s2: the second string main gives us
   * Return: the pointer or null if string is null
@@ -21,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	while (s2[j])
 		j++;
-	pointer = malloc(1 + (sizeof(char) * j) + (sizeof(char) * j));
+	pointer = malloc(1 + (sizeof(char) * i) + (sizeof(char) * j));
 	if (pointer == NULL)
 		return (NULL);
 	i = 0;
