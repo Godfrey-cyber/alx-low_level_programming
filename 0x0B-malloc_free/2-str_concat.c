@@ -6,7 +6,7 @@
   * @s1: the first string main gives us
   * @s2: the second string main gives us
   * Description: the returned memory allocation has
-  * 	a copy of the added strings and can be freed
+  * a copy of the added strings and can be freed
   * Return: the pointer or null if string is null
   */
 char *str_concat(char *s1, char *s2)
