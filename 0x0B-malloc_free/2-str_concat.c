@@ -9,7 +9,7 @@
   * a copy of the added strings and can be freed
   * Return: the pointer or null if string is null
   */
-char *str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)/**does something **/
 {
 	char *pointer;
 	int j = 0;
