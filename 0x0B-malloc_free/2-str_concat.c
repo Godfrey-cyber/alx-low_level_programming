@@ -1,44 +1,38 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
- /**
-  * str_concat - function that concatenates two strings
-  * @s1: the first string main gives us
-  * @s2: the second string main gives us
-  * Description: the returned memory allocation has
-  * a copy of the added strings and can be freed
-  * Return: the pointer or null if string is null
-  */
-char *str_concat(char *s1, char *s2)/**str_concat -  does something **/
+/**
+ * *str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to new space in memory or null
+ **/
+char *str_concat(char *s1, char *s2)
 {
-	char *pointer;
-	int j = 0;
-	int i = 0;
-
+	char *concats;
+	int i, j;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	while (s1[i])
+	i = j = 0;
+	while (s1[i] != '\0')
 		i++;
-	while (s2[j])
+	while (s2[j] != '\0')
 		j++;
-	pointer = malloc(1 + (sizeof(char) * i) + (sizeof(char) * j));
-	if (pointer == NULL)
+	concats  = malloc(sizeof(char) * (i + j + 1));
+	if (concats == NULL)
 		return (NULL);
-	i = 0;
-	while (s1[i])
+	i = j = 0;
+	while (s1[i] != '\0')
 	{
-		pointer[i] =  s1[i];
+		concats[i] = s1[i];
 		i++;
 	}
-	j = 0;
-	while (s2[j])
+	while (s2[j] != '\0')
 	{
-		pointer[i] = s2[j];
-		i++;
-		j++;
+		concats[i] = s2[j];
+		i++, j++;
 	}
-	pointer[i] = s2[j];
-	return (pointer);
+	concats[i] = '\0';
+	return (concats);
 }
