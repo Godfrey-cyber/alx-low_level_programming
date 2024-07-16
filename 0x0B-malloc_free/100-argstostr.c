@@ -1,38 +1,54 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+int _strlen(char *ch);
 
 /**
- * print_tab - Prints an array of string
- * @tab: The array to print
- *
- * Return: nothing
+ * argstostr - concatenate arguments.
+ * @ac: arg counter.
+ * @av: arg vector.
+ * Return: pointer p.
  */
-void print_tab(char **tab)
+char *argstostr(int ac, char **av)
 {
-    int y;
+	int i, a = 0, k = 0;
+	int j;
+	char *p;
+	
+	if (ac == 0 || av == NULL)
+		return (0);
+	for (i = 0; i < ac; i++)
+	{
+		a += _strlen(av[i]);
+	}
+	p = malloc(a + 1 + ac);
+	if (p == NULL)
+		return (0);
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; j < (_strlen(av[i])); j++)
+	{
+	p[k] = av[i][j];
+	k++;
+}
 
-    for (y = 0; tab[y] != NULL; ++y)
-    {
-        printf("%s\n", tab[y]);
-    }
+p[k] = '\n';
+k++;
+}
+p[k] = '\0';
+return (p);
 }
 
 /**
- * main - check the code for ALX School students.
- *
- * Return: 1 if an error occurred, 0 otherwise
+ * _strlen - counts number of chars.
+ * @ch: string.
+ * Return: pointer i.
  */
-int main(void)
-{
-    char **tab;
 
-    tab = strtow("My name is Godfrey");
-    if (tab == NULL)
-    {
-        printf("Failed\n");
-        return (1);
-    }
-    print_tab(tab);
-    return (0);
+int _strlen(char *ch)
+{
+int i = 0;
+while (ch[i])
+i++;
+return (i);
 }
