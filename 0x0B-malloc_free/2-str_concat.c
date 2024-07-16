@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
  /**
-  * str_concat - function that concatenates two strings
+  * *str_concat - function that concatenates two strings
   * @s1: the first string main gives us
   * @s2: the second string main gives us
   * Description: the returned memory allocation has
