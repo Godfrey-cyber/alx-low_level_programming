@@ -5,6 +5,7 @@
   * str_concat - function that concatenates two strings
   * @s1: the first string main gives us
   * @s2: the second string main gives us
+  * Description: the returned memory allocation has
   * Return: the pointer or null if string is null
   */
 char *str_concat(char *s1, char *s2)
