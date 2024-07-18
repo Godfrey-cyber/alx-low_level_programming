@@ -11,8 +11,8 @@
 * Return: print the result. return 0 if success
 */
 
-/*# IF EITHER NUMBER ARE ZERO RETURN 0;*/
-/*##SHOULD CHECK IF BEGINNING LEADING NUMBER IS ZERO. */
+# IF EITHER NUMBER ARE ZERO RETURN 0;
+##SHOULD CHECK IF BEGINNING LEADING NUMBER IS ZERO.
 
 
 int main(int argc, char **argv)
