@@ -26,7 +26,7 @@ void copyit(char *ptr, char *pointer, int old_size)
 * @new_size: the new size of the memory
 *
 * Description: omg there are too many specifics for this
-* Return: returns the pointer or nullllllll
+* Return: returns the pointer or null
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
