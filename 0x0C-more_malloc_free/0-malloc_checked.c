@@ -1,7 +1,5 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 /**
  * malloc_checked - this function allocates memory
  * @b: an int contains the size of the memory we want allocated
@@ -13,7 +11,7 @@ void *malloc_checked(unsigned int b)
 	int *ptr;
 
 	ptr = malloc(b);
-	if (pointer == NULL)
+	if (ptr == NULL)
 		exit(98);
 	return (ptr);
 }
