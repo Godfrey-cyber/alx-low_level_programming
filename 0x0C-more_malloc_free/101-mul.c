@@ -11,8 +11,8 @@
 * Return: print the result. return 0 if success
 */
 
-# IF EITHER NUMBER ARE ZERO RETURN 0;
-##SHOULD CHECK IF BEGINNING LEADING NUMBER IS ZERO. 
+/*# IF EITHER NUMBER ARE ZERO RETURN 0;*/
+/*##SHOULD CHECK IF BEGINNING LEADING NUMBER IS ZERO. */
 
 
 int main(int argc, char **argv)
@@ -27,12 +27,10 @@ int main(int argc, char **argv)
 
 	while (argv[1][size1])//strlength and checks if digit
 	{
-		ISDIGIT\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\##################
 		size1++;
 	}
 	while (argv[2][size2])//strlength and checks if digit
 	{
-		ISITADIGIT########################################################
 		size2++;
 	}
 	product_size = size1 + size2 + 1;//calculate the range we need
@@ -65,7 +63,6 @@ int main(int argc, char **argv)
 		tab++;
 	}
 	product[index] ='\0';
-	reversestring\\\\\###########################################################
 	printf("%s\n", product);
 	free(product);
 	return (0);
