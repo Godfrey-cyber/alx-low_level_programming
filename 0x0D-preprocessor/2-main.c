@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - header file that defines a macro named PI
+ * main - prints the name of the file it was compiled from
  *
  * @void: no parameters
  *
