@@ -1,1 +1,1 @@
-readme file for the c progamming
+a readme file for c - preprocessor
