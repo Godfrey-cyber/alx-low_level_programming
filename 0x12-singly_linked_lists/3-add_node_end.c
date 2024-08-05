@@ -24,7 +24,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		while (new-last_node->str[racer])
 			racer++;
 		new-last_node->next = NULL;
-		new-last_node->len = runner;
+		new-last_node->len = rucer;
 		if (!*head)
 		{
 			*head = new-last_node;
