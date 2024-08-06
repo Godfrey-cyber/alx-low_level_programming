@@ -8,6 +8,7 @@
 int pop_listint(listint_t **head)
 {
 	int iteration;
+
 	listint_t *real;
 	listint_t *host;
 
