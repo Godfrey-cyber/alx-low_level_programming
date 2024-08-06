@@ -1,10 +1,9 @@
-#include "lists.h"
+#include <stdio.h>
 /**
- * mystartupfunction - is a function prints a string before the main function is executed
- *
- * Return: void
+ * hello - p is a  function that prints from init by the loader before main
  */
-void __attribute__ ((constructor)) mystartupfunction(void)
+void hello(void) __attribute__ ((constructor));
+void hello(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
