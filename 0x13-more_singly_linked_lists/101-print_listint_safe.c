@@ -1,87 +1,71 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * print_listint_safe - this function prints a listint_t linked list.
- * @head: a pointer to the head of linked list.
- *
- * with a loop.
- * You should go through the list only once.
- * Return: 1 if addressis  in the list.
- */
+* print_listint_safe - prints a list but safely
+* @head: the head node. pointer
+*
+* Description: dont wanna print a infinite loop
+*	either match addresses or free the head so cant loop back
+* Return: the count number
+* A: we make an array that will store everything from head given
+* B: while the head is not null, we iterate through
+* C: count is initially 0 and i is 0 so we dont even loop through the first
+*	time, we skip this. we assign array to the head and increment head
+*	then we increase count so when we loop through again, we can go
+*	into the for loop
+* D: inside the loop, we check if the head value is equal to the array values
+*	if we found a match then we turn the boolean flag on and break and
+*	we make the index equal to whatever the i counter was
+* E: if we found a match, which is a loop, we break out of the while loop
+* F: new loop, we will loop through our array values we copied over from head
+*	and we print out their pointer address and their value.
+* G: if we had an infinite loop we have a flag check of 1 which will
+*	also print out the index which is the last one.
+*/
 
 size_t print_listint_safe(const listint_t *head)
 {
-	listnode_t *nodes = NULL;
-	size_t state = 0;
+	size_t count = 0;
+	size_t index = 0;
+	listint_t const **array;/* A */
 
-	while (!is_in_nodes(nodes, head))
+	array = malloc(sizeof(listint_t *) * 1024);
+	if (!array)
+		exit(98);
+	unsigned int i = 0;
+	unsigned int flag = 0;
+
+	while (head != NULL)/* B */
 	{
-		if (!add_nodeptr(&nodes, head))
+		for (i = 0; i < count; i++)/* C*/
 		{
-			free_listnode(nodes);
-			exit(98);
+			if (head == array[i])/* D */
+			{
+				flag = 1;
+				index = i;
+				break;
+			}
+			else
+				flag = 0;
 		}
-		printf("[%p] %d\n", (void *)head, head->n);
-		/* state the nodes */
-		state++;
+
+		if (flag == 1)/* E */
+			break;
+		array[count] = head;
 		head = head->next;
+		count++;
 	}
-	if (head != NULL)
-		printf("-> [%p] %d\n", (void *)head, head->n);
-	free_listnode(nodes);
-	return (state);
-}
 
-/**
- * add_nodeptr - this function adds a new node at the beginning of a listint_t list
- * @head: this  pointer points to the pointer to the first node
- * @ptr: the value of the new node
- *
- * Return: the address of the new element, or NULL if it failed
- */
-listnode_t *add_nodeptr(listnode_t **head, const listint_t *ptr)
-{
-	listnode_t *node;
-
-	node = malloc(sizeof(listnode_t));
-	if (node == NULL)
-		return (NULL);
-	node->ptr = (listint_t *)ptr;
-	node->next = *head;
-	*head = node;
-	return (node);
-}
-
-/**
- * free_listnode -this function  frees a free_listnode list
- * @head: pointer to first node of the list
- */
-void free_listnode(listnode_t *head)
-{
-	if (head == NULL)
-		return;
-	free_listnode(head->next);
-	free(head);
-}
-
-/**
- * is_in_nodes - checks whether a given address is in a given list
- * @head: first node in the list
- * @ptr: address
- *
- * Return: 1 if address is in nodes. Otherwise 0
- */
-int is_in_nodes(listnode_t *head, const listint_t *ptr)
-{
-	if (ptr == NULL)
-		return (1);
-	while (head != NULL)
+	i = 0;
+	while (i < count)/* F */
 	{
-		if (ptr == head->ptr)
-			return (1);
-		head = head->next;
+		printf("[%p] %d\n", (void *)array[i], array[i]->n);
+		i++;
 	}
-	return (0);
+	if (flag == 1)/* G */
+	{
+		printf("-> [%p] %d\n", (void *)array[index], array[index]->n);
+	}
+	free(array);
+	return (count);
 }
