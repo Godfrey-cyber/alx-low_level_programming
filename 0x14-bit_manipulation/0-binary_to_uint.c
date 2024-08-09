@@ -1,38 +1,37 @@
-#include "main.h"
 #include "godfrey.h"
+#include "main.h"
 /**
- * binary_to_uint -  a function that converts a binary number to an unsigned int.
+ * binary_to_uint - convert binary to decimal.
  * @b: the binary number in string format
- * Description: to convert binary to decimal
+ * Description: convert binary to decimal
+ * section header: the header of this function is header.h
  * Return: this return the convert number.
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int outcome;
-	unsinged int original;
+	unsigned int result, base;
+	int i;
 
-	int x;
-
-	outcome = 0;
-	x = 0;
-	original = 1;
+	result = 0;
+	i = 0;
+	base = 1;
 
 	if (!b)
 		return (0);
 
-	while (*(b + x))
+	while (*(b + i))
 	{
-		if (*(b + x) != '0' && *(b + x) != '1')
+		if (*(b + i) != '0' && *(b + i) != '1')
 			return (0);
-		x++;
+		i++;
 	}
-	for (x--; x >= 0; x--)
+	for (i--; i >= 0; i--)
 	{
-		if (*(b + x) == '1')
-			outcome = outcome + original;
-		original = original * 2;
+		if (*(b + i) == '1')
+			result = result + base;
+		base = base * 2;
 	}
 
-	return (outcome);
+	return (result);
 }
