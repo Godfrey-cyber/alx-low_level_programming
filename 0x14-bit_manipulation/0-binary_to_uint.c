@@ -1,4 +1,5 @@
 #include "main.h"
+#include "godfrey.h"
 /**
  * binary_to_uint -  a function that converts a binary number to an unsigned int.
  * @b: the binary number in string format
