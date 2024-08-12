@@ -2,16 +2,14 @@
 #include "hello.h"
 
 /**
- *  create_file -This function creates a file and write in it
- * @filename: the file to be created
- * @text_content: the content of the file to be created
+ *  create_file - create a file and write in it
+ * @filename:file to be created
+ * @text_content: content of the file created
  * Return: 1 or -1;
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd; 
-	int len;
-	int  w;
+	int fd, len, w;
 
 	if (filename == NULL)
 		return (-1);
@@ -25,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (len = 0; text_content[len] != '\0'; len++)
 		;
-		w = w(fd, text_content, len);
+		w = write(fd, text_content, len);
 	}
 	if (w == -1)
 	{
