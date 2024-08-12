@@ -1,19 +1,16 @@
 #include "main.h"
-#include <stdlib.h>
-#include <hello.h>
-
+#include "holberton.h"
 /**
- * read_textfile - A function that rReads a text file and prints it to POSIX stdout.
- * @filename: A pointer to the name of the file.
- * @letters: The number of letters the
- *           function should read and print.
- *
- * Return: If the function fails or filename is NULL - 0.
- *         O/w - the actual number of bytes the function can read and print.
+ * read_textfile - read a file.
+ * @filename: the file to read.
+ * @letters: the number of chars to read
+ * Description: read a file
+ * section header: the header of this function is holberton.h
+ * Return: this return the number of chars.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t open, read, write;
+	int fd, _read, _write;
 	char *buffer;
 
 	if (filename == NULL)
@@ -23,18 +20,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 
-	open = open(filename, O_RDONLY);
-	read = read(open, buffer, letters);
-	write = write(STDOUT_FILENO, buffer, r);
-
-	if (open == -1 || read == -1 || write == -1 || write != read)
+	fd = open(filename, O_RDONLY, 600);
+	if (fd == -1)
+	{
+		free(buffer);
+		return (0);
+	}
+	_read = read(fd, buffer, letters);
+	if (_read == -1)
 	{
 		free(buffer);
 		return (0);
 	}
 
-	free(buffer);
-	close(open);
+	_write = write(STDOUT_FILENO, buffer, _read);
+	if (_write == -1 || _write != _read)
+	{
+		return (0);
+	}
 
-	return (write);
+	free(buffer);
+	close(fd);
+	return (_write);
 }
