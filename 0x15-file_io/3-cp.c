@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int dest_fd;
 	int _read;
 	int  _close_src;
-       	int _close_dest;
+	int _close_dest;
 	char buffer[1024];
 
 	if (argc > 3 || argc < 3)
