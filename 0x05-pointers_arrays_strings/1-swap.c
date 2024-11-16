@@ -1,13 +1,14 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
- * swap_int - a function tht swaps integers
- * @a: int to check
- * @b: second int to check
+ * swap_int - swaps the values of two integers.
+ * @a: first integer.
+ * @b: second integer.
+ * Return: no return.
  */
 void swap_int(int *a, int *b)
 {
-	int n = *a;
+	int c = *a;
 	*a = *b;
-	*b = n;
+	*b = c;
 }
