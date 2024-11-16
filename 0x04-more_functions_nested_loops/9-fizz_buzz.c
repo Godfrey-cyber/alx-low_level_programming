@@ -1,33 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - prints Buzz each numbers of 3 and 5.
- * Return: Always 0.
- */
+* main - fizz bizz holterton style
+* Description: Uses headers to link and a nested loops to achieve goal
+* fizz buzz from 1-100. print fizz for multiples of 3 and buzz for
+* multiples of 5 and fizzbuzz for multiples of both eg. 15
+* could use a switch for neater and better code
+* Return: 0 if no errors
+*/
+
 int main(void)
 {
-    int x;
+    int index;
 
-    x = 1;
-    printf("%d", x);
-    for (x = 2; x <= 100; x++)
+    for (index = 1; index <= 100; index++)
     {
-        if ((x % 3 == 0) && (x % 5 == 0))
-        {
-            printf(" FizzBuzz");
-        }
-        else if (x % 3 == 0)
-        {
-            printf(" Fizz");
-        }
-        else if (x % 5 == 0)
-        {
-            printf(" Buzz");
-        }
+        if (index % 3 == 0 && index % 5 == 0)
+            printf("FizzBuzz");
+        else if (index % 3 == 0)
+            printf("Fizz");
+        else if (index % 5 == 0)
+            printf("Buzz");
         else
-        {
-            printf(" %d", x);
-        }
+            printf("%d", index);
+        if (index != 100)
+            printf(" ");
     }
     printf("\n");
     return (0);
