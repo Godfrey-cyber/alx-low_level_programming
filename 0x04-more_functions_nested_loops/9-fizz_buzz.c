@@ -11,21 +11,21 @@
 
 int main(void)
 {
-    int index;
+	int i;
 
-    for (index = 1; index <= 100; index++)
-    {
-        if (index % 3 == 0 && index % 5 == 0)
-            printf("FizzBuzz");
-        else if (index % 3 == 0)
-            printf("Fizz");
-        else if (index % 5 == 0)
-            printf("Buzz");
-        else
-            printf("%d", index);
-        if (index != 100)
-            printf(" ");
-    }
-    printf("\n");
-    return (0);
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", i);
+		if (i != 100)
+			printf(" ");
+	}
+	printf("\n");
+	return (0);
 }
