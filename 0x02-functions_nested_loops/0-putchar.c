@@ -1,17 +1,13 @@
-#include "main.h"
-#include <stdio.h>
-/**
- * main - a program that prints _putchar, followed by a new line.
- * Return: Returns (0) Success
- */
-int main(void)
-{
-	int i;
-	char name[] = "_putchar";
+#include <unistd.h>
 
-	for (i = 0; i <= 7; i++)
-	{
-		putchar(name[i]);
-	}
-	return (0);
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
